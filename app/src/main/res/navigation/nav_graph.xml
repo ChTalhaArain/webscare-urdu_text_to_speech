@@ -1,0 +1,20 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.webscare.urdutexttospeech.fragments.Home"
+        android:label="Home" />
+
+    <fragment
+        android:id="@+id/reportBugFragment"
+        android:name="com.webscare.urdutexttospeech.fragments.LocalFiles"
+        android:label="Report Bug" />
+
+    <fragment
+        android:id="@+id/policyFragment"
+        android:name="com.webscare.urdutexttospeech.fragments.Settings"
+        android:label="Privacy Policy" />
+</navigation>
