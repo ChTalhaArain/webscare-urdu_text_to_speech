@@ -9,12 +9,12 @@
         android:label="Home" />
 
     <fragment
-        android:id="@+id/reportBugFragment"
+        android:id="@+id/LocalFilesFragment"
         android:name="com.webscare.urdutexttospeech.fragments.LocalFiles"
-        android:label="Report Bug" />
+        android:label="Files" />
 
     <fragment
-        android:id="@+id/policyFragment"
+        android:id="@+id/SettingsFragment"
         android:name="com.webscare.urdutexttospeech.fragments.Settings"
-        android:label="Privacy Policy" />
+        android:label="Settings" />
 </navigation>
