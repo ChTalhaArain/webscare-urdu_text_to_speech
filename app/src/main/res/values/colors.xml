@@ -16,6 +16,7 @@
     <color name="boarderOfTextEditor">#D9D9D9</color>
     <color name="textActionIcon">#B2B9B5</color>
     <color name="textActionBarBorder">#D9D9D9</color>
+    <color name="textEditorBackground">#FFFFFFFF</color>
 
     <color name="recentFileText">#000000</color>
     <color name="noFilePlaceHolder">#D6D6D6</color>
@@ -46,9 +47,15 @@
 
     <color name="navItem">#005D28</color>
     <color name="navItemSelected">#FFCF30</color>
+    <color name="navBarBackground">#EFEFEF</color>
+
+
 
     // coloring styles for dark theme
 
+
+    <color name="background_dark">#232323</color>
+    <color name="navBackground_dark">#232323</color>
 
     <color name="headingText_d">#03CE5A</color>
     <color name="bellIcon_d">#D4D4D4</color>
@@ -58,6 +65,7 @@
     <color name="boarderOfTextEditor_d">#151515</color>
     <color name="textActionIcon_d">#D4D4D4</color>
     <color name="textActionBarBorder_d">#623636</color>
+    <color name="textEditorBackground_d">#2E2E2E</color>
 
     <color name="recentFileText_d">#FFFFFF</color>
     <color name="noFilePlaceHolder_d">#FFFFFF</color>
@@ -68,12 +76,12 @@
     <color name="fileNameText_d">#D4D4D4</color>
     <color name="dotMenu_d">#D4D4D4</color>
 
-    <color name="voiceMenuBackground_d"></color>
-    <color name="voiceMenuBorder_d"></color>
-    <color name="voiceMenuIcon_d"></color>
-    <color name="voiceMenuText_d"></color>
-    <color name="voiceMenuDropdown_d"></color>
-    <color name="voiceMenuTickMark_d"></color>
+    <color name="voiceMenuBackground_d">#2E2E2E</color>
+    <color name="voiceMenuBorder_d">#414141</color>
+    <color name="voiceMenuIcon_d">#F5F5F5</color>
+    <color name="voiceMenuText_d">#D4D4D4</color>
+    <color name="voiceMenuDropdown_d">#BFBFBF</color>
+    <color name="voiceMenuTickMark_d">#6DEFA5</color>
 
     <color name="fileMenuText_d"></color>
     <color name="fileMenuBackground_d"></color>
@@ -88,6 +96,7 @@
 
     <color name="navItem_d">#089F49</color>
     <color name="navItemSelected_d">#FFC918</color>
+    <color name="navBarBackground_d">#212121</color>
 
 
 </resources>

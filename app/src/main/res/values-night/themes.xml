@@ -1,17 +1,51 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.UrduTextToSpeech" parent="Theme.Material3.DayNight.NoActionBar">
 
     </style>
 
     <style name="navigationBarStyle">
-        <item name="android:background">@color/black</item>
+        <item name="android:background">@color/navBarBackground_d</item>
         <item name="itemIconTint">@color/nav_item_color_dark</item>
         <item name="itemTextColor">@color/nav_item_color_dark</item>
     </style>
 
     <style name="fragmentContainerStyle">
-        <item name="android:background">@color/black</item>
+        <item name="android:background">@color/background_dark</item>
+    </style>
+
+    <!-- Home Screen coloring style -->
+
+    <style name="homeScreenMainHeadingStyle">
+        <item name="android:textColor">@color/headingText_d</item>
+    </style>
+
+    <style name="homeScreenNotificationIcon">
+        <item name="android:iconTint">@color/bellIcon_d</item>
+    </style>
+
+    <style name="homeScreenTextEditorCard">
+        <item name="android:background">@color/white</item>
+        <item name="android:strokeColor">@color/boarderOfTextEditor_d</item>
+    </style>
+
+
+    <style name="homeScreenTextActionIcon">
+        <item name="android:iconTint">@color/textActionIcon_d</item>
+    </style>
+
+    <style name="noFilesPlaceholder">
+        <item name="android:iconTint">@color/noFilePlaceHolder_d</item>
+    </style>
+
+    <style name="homeScreenRecentFilesHeading">
+        <item name="android:textColor">@color/recentFileText_d</item>
+    </style>
+
+    <style name="homeScreenTextEditorStyle" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">@color/textInEditText_d</item>
+        <item name="android:textColorHint">@color/placeHolderText_d</item>
+        <item name="android:background">@color/textEditorBackground_d</item>
     </style>
 
 </resources>

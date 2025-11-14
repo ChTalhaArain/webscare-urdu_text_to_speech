@@ -4,7 +4,7 @@
     </style>
 
     <style name="navigationBarStyle">
-        <item name="android:background">@color/white</item>
+        <item name="android:background">@color/navBarBackground</item>
         <item name="itemIconTint">@color/nav_item_color</item>
         <item name="itemTextColor">@color/nav_item_color</item>
     </style>
@@ -13,6 +13,40 @@
         <item name="android:background">@color/white</item>
     </style>
 
+
+    <!-- Home Screen coloring style -->
+
+    <style name="homeScreenMainHeadingStyle">
+        <item name="android:textColor">@color/headingText</item>
+    </style>
+
+    <style name="homeScreenNotificationIcon">
+        <item name="android:iconTint">@color/bellIcon</item>
+    </style>
+
+    <style name="homeScreenTextEditorCard">
+        <item name="android:background">@color/white</item>
+        <item name="android:strokeColor">@color/boarderOfTextEditor</item>
+    </style>
+
+
+    <style name="homeScreenTextActionIcon">
+        <item name="android:iconTint">@color/textActionIcon</item>
+    </style>
+
+    <style name="noFilesPlaceholder">
+        <item name="android:iconTint">@color/noFilePlaceHolder</item>
+    </style>
+
+    <style name="homeScreenRecentFilesHeading">
+        <item name="android:textColor">@color/recentFileText</item>
+    </style>
+
+    <style name="homeScreenTextEditorStyle" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">@color/textInEditText</item>
+        <item name="android:textColorHint">@color/placeHolderText</item>
+        <item name="android:background">@color/textEditorBackground</item>
+    </style>
 
     <style name="Theme.UrduTextToSpeech" parent="Base.Theme.UrduTextToSpeech"/>
 </resources>

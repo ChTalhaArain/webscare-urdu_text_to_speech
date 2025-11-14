@@ -27,11 +27,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/navigationBarStyle"
-            app:itemIconSize="30dp"
+            app:itemIconSize="24dp"
             app:menu="@menu/bottom_nav_menu"
+            app:itemPaddingTop="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
