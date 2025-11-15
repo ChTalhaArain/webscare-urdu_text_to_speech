@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical"
+              android:padding="12dp"
+              android:background="@drawable/bg_popup"
+              android:layout_width="220dp"
+              android:layout_height="wrap_content">
+
+    <!-- ========== GENDER HEADER ========== -->
+    <TextView
+            android:id="@+id/headerGender"
+            android:text="Gender"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:textColor="#5B5858"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/ic_gender_menu"
+
+            app:drawableEndCompat="@drawable/ic_arrow_down"/>
+
+    <!-- GENDER OPTIONS -->
+    <LinearLayout
+            android:id="@+id/optionsGender"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/optionMale"
+                android:padding="10dp"
+                android:text="Male"
+                android:textSize="15sp"
+                android:textColor="#5B5858"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:drawableEndCompat="@drawable/ic_check"
+                app:drawableTint="@android:color/transparent" />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/optionFemale"
+                android:padding="10dp"
+                android:text="Female"
+                android:textSize="15sp"
+                android:textColor="#5B5858"
+                app:drawableTint="@android:color/transparent"
+                app:drawableEndCompat="@drawable/ic_check"/>
+    </LinearLayout>
+
+    <!-- ========== ACCENT HEADER ========== -->
+    <TextView
+            android:id="@+id/headerAccent"
+            android:text="Accent"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:textColor="#5B5858"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/ic_accent_menu"
+            app:drawableTint="#5B5858"
+            app:drawableEndCompat="@drawable/ic_arrow_down"/>
+
+    <!-- ACCENT OPTIONS -->
+    <LinearLayout
+            android:id="@+id/optionsAccent"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/accentStandard"
+                android:padding="10dp"
+                android:text="Standard Urdu"
+                android:textColor="#5B5858"
+                app:drawableTint="@android:color/transparent"
+                app:drawableEndCompat="@drawable/ic_check"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/accentPakistani"
+                android:padding="10dp"
+                android:textColor="#5B5858"
+                android:text="Pakistani Urdu Accent"
+                app:drawableTint="@android:color/transparent"
+                app:drawableEndCompat="@drawable/ic_check"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/accentLahori"
+                android:padding="10dp"
+                android:textColor="#5B5858"
+                android:text="Lahori Urdu"
+                app:drawableTint="@android:color/transparent"
+                app:drawableEndCompat="@drawable/ic_check"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/accentKarachi"
+                android:padding="10dp"
+                android:textColor="#5B5858"
+                android:text="Karachi Urdu"
+                app:drawableTint="@android:color/transparent"
+                app:drawableEndCompat="@drawable/ic_check"/>
+    </LinearLayout>
+
+</LinearLayout>

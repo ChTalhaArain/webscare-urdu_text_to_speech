@@ -18,6 +18,7 @@
 
     <style name="homeScreenMainHeadingStyle">
         <item name="android:textColor">@color/headingText_d</item>
+        <item name="android:drawableTint">@color/bellIcon_d</item>
     </style>
 
     <style name="homeScreenNotificationIcon">

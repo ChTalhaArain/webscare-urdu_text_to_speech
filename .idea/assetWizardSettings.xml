@@ -297,8 +297,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_settings_selected" />
-                            <entry key="sourceFile" value="C:\Users\chtal\Downloads\ic_settings_selected.svg" />
+                            <entry key="outputName" value="ic_arrow_down" />
+                            <entry key="sourceFile" value="C:\Users\chtal\Downloads\ic_arrow_down.svg" />
                           </map>
                         </option>
                       </PersistentState>

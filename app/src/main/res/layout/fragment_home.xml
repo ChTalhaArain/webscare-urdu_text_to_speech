@@ -1,160 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-       xmlns:app="http://schemas.android.com/apk/res-auto"
-       xmlns:tools="http://schemas.android.com/tools"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:fillViewport="true"
-       tools:context=".fragments.Home"
-       android:padding="16dp"
-       style="@style/fragmentContainerStyle">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/fragmentContainerStyle"
+    android:padding="16dp"
+    tools:context=".fragments.Home">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/homeScreenMainHeadingStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/home_screen_title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:drawableEnd="@drawable/ic_notification_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        style="@style/homeScreenTextEditorCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:layout_constraintTop_toBottomOf="@id/titleText">
+
+        <LinearLayout
+            style="@style/fragmentContainerStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-        <LinearLayout
+            <!-- EDIT TEXT AREA -->
+            <EditText
+                android:id="@+id/inputText"
+                style="@style/fragmentContainerStyle"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:paddingHorizontal="4dp">
+                android:layout_height="250dp"
+                android:allowUndo="true"
+                android:autofillHints="text"
+                android:fadeScrollbars="false"
+                android:fontFamily="@font/jameel_noori_nastaleeq_regular"
+                android:gravity="top|start"
+                android:hint="@string/text_hint"
+                android:imeOptions="actionDone"
+                android:includeFontPadding="true"
+                android:inputType="textMultiLine"
+                android:padding="10dp"
+                android:scrollbarSize="2dp"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:textDirection="rtl"
+                android:textSize="18sp" />
 
-            <TextView
-                    android:id="@+id/titleText"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    style="@style/homeScreenMainHeadingStyle"
-                    android:text="Urdu Text to Speech"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-            <ImageView
-                    android:id="@+id/notificationIcon"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    style="@style/homeScreenNotificationIcon"
-                    android:src="@drawable/ic_notification_button"
-                    android:contentDescription="Notifications" />
-        </LinearLayout>
-
-        <!-- ========== CARD AREA ========== -->
-        <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                style="@style/homeScreenTextEditorCard"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="0dp"
-                android:padding="8dp">
-
+            <!-- ICON BAR -->
             <LinearLayout
-                    android:layout_width="match_parent"
+                style="@style/fragmentContainerStyle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Left icons -->
+                <ImageView
+                    android:id="@+id/deleteButton"
+                    style="@style/homeScreenTextActionIcon"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="@style/fragmentContainerStyle"
-                    android:orientation="vertical">
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_delete_button" />
 
-                <!-- EDIT TEXT AREA -->
-                <EditText
-                        android:id="@+id/inputText"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.40"
-                        android:minHeight="250dp"
-                        android:gravity="top|start"
-                        android:hint="یہاں سے شروع کریں..."
-                        android:textDirection="rtl"
-                        android:padding="10dp"
-                        style="@style/fragmentContainerStyle"
-                        android:textSize="18sp"
-                        android:maxLines="10" />
+                <ImageView
+                    android:id="@+id/undoButton"
+                    style="@style/homeScreenTextActionIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="Undo Button"
+                    android:src="@drawable/ic_undo_button" />
 
-                <!-- ICON BAR -->
-                <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:layout_marginHorizontal="12dp"
-                        android:orientation="horizontal"
-                        style="@style/fragmentContainerStyle"
-                        android:gravity="center_vertical">
+                <ImageView
+                    android:id="@+id/redoButton"
+                    style="@style/homeScreenTextActionIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="Redo Button"
+                    android:src="@drawable/ic_redo_button" />
 
-                    <!-- Left icons -->
-                    <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            style="@style/homeScreenTextActionIcon"
-                            android:src="@drawable/ic_delete_button"
-                            android:layout_marginEnd="16dp" />
+                <!-- Spacer -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
 
-                    <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_undo_button"
-                            style="@style/homeScreenTextActionIcon"
-                            android:layout_marginEnd="16dp" />
-
-                    <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_redo_button"
-                            style="@style/homeScreenTextActionIcon"
-                            android:layout_marginEnd="16dp" />
-
-                    <!-- Spacer -->
-                    <View
-                            android:layout_width="0dp"
-                            android:layout_height="1dp"
-                            android:layout_weight="1" />
-
-                    <!-- Right icon -->
-                    <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_copy_button"
-                            style="@style/homeScreenTextActionIcon"/>
-                </LinearLayout>
+                <!-- Right icon -->
+                <ImageView
+                    android:id="@+id/copyButton"
+                    style="@style/homeScreenTextActionIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/copy_button"
+                    android:src="@drawable/ic_copy_button" />
             </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
-        <!-- ========== PLAY BUTTON ========== -->
-        <ImageView
-                android:id="@+id/playButton"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:src="@drawable/ic_play_button"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp" />
+    <ImageView
+        android:id="@+id/playButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_play_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card" />
 
-        <!-- ========== RECENT FILES HEADING ========== -->
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Recent Files"
-                style="@style/homeScreenRecentFilesHeading"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginTop="24dp" />
+    <TextView
+        android:id="@+id/recentFilesHeading"
+        style="@style/homeScreenRecentFilesHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/recent_files"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/playButton" />
 
-        <!-- PLACEHOLDER WHEN NO FILES -->
-        <ImageView
-                android:id="@+id/placeholder"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_gravity="center_horizontal"
-                style="@style/noFilesPlaceholder"
-                android:src="@drawable/ic_empty_list_placeholder"
-                android:layout_marginTop="16dp"
-                android:visibility="visible" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerFiles"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recentFilesHeading" />
 
-        <!-- RECYCLER VIEW FOR FILES -->
-        <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerFiles"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:visibility="gone" />
+    <ImageView
+        android:id="@+id/placeholder"
+        style="@style/noFilesPlaceholder"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="No files to show"
+        android:src="@drawable/ic_empty_list_placeholder"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recentFilesHeading"
+        app:layout_constraintVertical_bias="0.2" />
 
-    </LinearLayout>
-</androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

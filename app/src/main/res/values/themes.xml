@@ -18,6 +18,7 @@
 
     <style name="homeScreenMainHeadingStyle">
         <item name="android:textColor">@color/headingText</item>
+        <item name="android:drawableTint">@color/bellIcon</item>
     </style>
 
     <style name="homeScreenNotificationIcon">
@@ -46,6 +47,20 @@
         <item name="android:textColor">@color/textInEditText</item>
         <item name="android:textColorHint">@color/placeHolderText</item>
         <item name="android:background">@color/textEditorBackground</item>
+    </style>
+
+
+
+    <!-- Voice Popup coloring styles -->
+
+
+    <style name="voicePopupBackground">
+        <item name="android:background">@drawable/bg_popup</item>
+    </style>
+
+    <style name="voiceMenuHeading">
+        <item name="android:textColor">@color/voiceMenuHeading</item>
+        <item name="android:drawableTint">@color/voiceMenuHeading</item>
     </style>
 
     <style name="Theme.UrduTextToSpeech" parent="Base.Theme.UrduTextToSpeech"/>

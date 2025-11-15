@@ -28,11 +28,10 @@
     <color name="dotMenu">#B2B9B5</color>
 
     <color name="voiceMenuBackground">#FBFBFB</color>
-    <color name="voiceMenuBorder">#EFEFEF</color>
-    <color name="voiceMenuIcon">#A8A8A8</color>
-    <color name="voiceMenuText">#5B5858</color>
-    <color name="voiceMenuDropdown">#5B5858</color>
-    <color name="voiceMenuTickMark">#005D28</color>
+    <color name="voiceMenuHeading">#5B5858</color>
+    <color name="voiceMenuHeadingDrawable">#5B5858</color>
+    <color name="voiceMenuOptions">#5B5858</color>
+    <color name="voiceMenuOptionsDrawable">#6DEFA5</color>
 
     <color name="fileMenuText">#5B5858</color>
     <color name="fileMenuBackground">#FFFFFF</color>
@@ -76,12 +75,11 @@
     <color name="fileNameText_d">#D4D4D4</color>
     <color name="dotMenu_d">#D4D4D4</color>
 
-    <color name="voiceMenuBackground_d">#2E2E2E</color>
     <color name="voiceMenuBorder_d">#414141</color>
-    <color name="voiceMenuIcon_d">#F5F5F5</color>
-    <color name="voiceMenuText_d">#D4D4D4</color>
-    <color name="voiceMenuDropdown_d">#BFBFBF</color>
-    <color name="voiceMenuTickMark_d">#6DEFA5</color>
+    <color name="voiceMenuHeading_d">#5B5858</color>
+    <color name="voiceMenuHeadingDrawable_d">#5B5858</color>
+    <color name="voiceMenuOptions_d">#5B5858</color>
+    <color name="voiceMenuOptionsDrawable_d">#6DEFA5</color>
 
     <color name="fileMenuText_d"></color>
     <color name="fileMenuBackground_d"></color>
