@@ -9,7 +9,7 @@
     <!-- ========== GENDER HEADER ========== -->
     <TextView
             android:id="@+id/headerGender"
-            android:text="Gender"
+            android:text="@string/gender"
             android:textSize="16sp"
             android:padding="10dp"
             android:textColor="#5B5858"
@@ -17,22 +17,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawablePadding="8dp"
-            android:drawableStart="@drawable/ic_gender_menu"
-
-            app:drawableEndCompat="@drawable/ic_arrow_down"/>
+            app:drawableTint="#5B5858"
+            android:background="@drawable/bottom_border"
+            app:drawableEndCompat="@drawable/ic_arrow_down"
+            app:drawableStartCompat="@drawable/ic_gender_menu"/>
 
     <!-- GENDER OPTIONS -->
     <LinearLayout
             android:id="@+id/optionsGender"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
         <TextView
                 android:id="@+id/optionMale"
                 android:padding="10dp"
-                android:text="Male"
+                android:text="@string/male"
                 android:textSize="15sp"
                 android:textColor="#5B5858"
                 android:layout_width="match_parent"
@@ -45,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/optionFemale"
                 android:padding="10dp"
-                android:text="Female"
+                android:text="@string/female"
                 android:textSize="15sp"
                 android:textColor="#5B5858"
                 app:drawableTint="@android:color/transparent"
@@ -55,7 +56,7 @@
     <!-- ========== ACCENT HEADER ========== -->
     <TextView
             android:id="@+id/headerAccent"
-            android:text="Accent"
+            android:text="@string/accent"
             android:textSize="16sp"
             android:padding="10dp"
             android:textColor="#5B5858"
@@ -63,7 +64,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawablePadding="8dp"
-            android:drawableStart="@drawable/ic_accent_menu"
+            android:background="@drawable/bottom_border"
+            app:drawableStartCompat="@drawable/ic_accent_menu"
             app:drawableTint="#5B5858"
             app:drawableEndCompat="@drawable/ic_arrow_down"/>
 
@@ -71,7 +73,7 @@
     <LinearLayout
             android:id="@+id/optionsAccent"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -80,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/accentStandard"
                 android:padding="10dp"
-                android:text="Standard Urdu"
+                android:text="@string/standard_urdu"
                 android:textColor="#5B5858"
                 app:drawableTint="@android:color/transparent"
                 app:drawableEndCompat="@drawable/ic_check"/>
@@ -91,7 +93,7 @@
                 android:id="@+id/accentPakistani"
                 android:padding="10dp"
                 android:textColor="#5B5858"
-                android:text="Pakistani Urdu Accent"
+                android:text="@string/pakistani_urdu_accent"
                 app:drawableTint="@android:color/transparent"
                 app:drawableEndCompat="@drawable/ic_check"/>
 
@@ -101,7 +103,7 @@
                 android:id="@+id/accentLahori"
                 android:padding="10dp"
                 android:textColor="#5B5858"
-                android:text="Lahori Urdu"
+                android:text="@string/lahori_urdu"
                 app:drawableTint="@android:color/transparent"
                 app:drawableEndCompat="@drawable/ic_check"/>
 
@@ -111,7 +113,7 @@
                 android:id="@+id/accentKarachi"
                 android:padding="10dp"
                 android:textColor="#5B5858"
-                android:text="Karachi Urdu"
+                android:text="@string/karachi_urdu"
                 app:drawableTint="@android:color/transparent"
                 app:drawableEndCompat="@drawable/ic_check"/>
     </LinearLayout>

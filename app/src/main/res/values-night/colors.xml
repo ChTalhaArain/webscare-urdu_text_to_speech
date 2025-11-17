@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    // coloring styles for dark theme
+
+
+
+    <color name="navBackground">#232323</color>
+    <color name="fragmentBackground">#232323</color>
+
+    <color name="navItem">#089F49</color>
+    <color name="navItemSelected">#FFC918</color>
+    <color name="navBarBackground">#212121</color>
+
+
+
+    <color name="headingText">#03CE5A</color>
+    <color name="bellIcon">#D4D4D4</color>
+
+    <color name="placeHolderText">#FFFFFF</color>
+    <color name="textInEditText">#FFFFFF</color>
+    <color name="boarderOfTextEditor">#151515</color>
+    <color name="textActionIcon">#D4D4D4</color>
+    <color name="textActionBarBorder">#623636</color>
+    <color name="textEditorBackground">#2E2E2E</color>
+
+    <color name="recentFileText">#FFFFFF</color>
+    <color name="noFilePlaceHolder">#FFFFFF</color>
+    <color name="seeAllText">#D4D4D4</color>
+
+    <color name="fileCardBorder">#2E2E2E</color>
+
+    <color name="fileNameText">#D4D4D4</color>
+    <color name="dotMenu_d">#D4D4D4</color>
+
+    <color name="voiceMenuBorder_d">#414141</color>
+    <color name="voiceMenuHeading_d">#5B5858</color>
+    <color name="voiceMenuHeadingDrawable_d">#5B5858</color>
+    <color name="voiceMenuOptions_d">#5B5858</color>
+    <color name="voiceMenuOptionsDrawable_d">#6DEFA5</color>
+
+    <color name="fileMenuText_d"></color>
+    <color name="fileMenuBackground_d"></color>
+    <color name="fileMenuSelectedBorder_d"></color>
+    <color name="fileMenuSelectedBackground_d"></color>
+    <color name="fileMenuIcon_d"></color>
+
+    <color name="keypadOpenTextHeading_d"></color>
+    <color name="keypadHeadingBackIcon_d"></color>
+    <color name="fileNameHeading_d"></color>
+
+
+
+</resources>

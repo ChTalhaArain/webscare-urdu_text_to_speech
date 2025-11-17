@@ -4,96 +4,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fragmentBackground"
     style="@style/fragmentContainerStyle"
-    android:padding="16dp"
     tools:context=".fragments.Home">
 
     <TextView
         android:id="@+id/titleText"
-        style="@style/homeScreenMainHeadingStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        style="@style/mainHeadingStyle"
         android:text="@string/home_screen_title"
-        android:textSize="20sp"
-        android:textStyle="bold"
         android:drawableEnd="@drawable/ic_notification_button"
+        android:textColor="@color/headingText"
+        app:iconTint="@color/bellIcon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
-        style="@style/homeScreenTextEditorCard"
+        style="@style/textEditorCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:padding="8dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="0dp"
+        android:background="@color/textEditorBackground"
+        app:strokeColor="@color/boarderOfTextEditor"
         app:layout_constraintTop_toBottomOf="@id/titleText">
 
         <LinearLayout
-            style="@style/fragmentContainerStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <!-- EDIT TEXT AREA -->
+            
             <EditText
-                android:id="@+id/inputText"
-                style="@style/fragmentContainerStyle"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:allowUndo="true"
-                android:autofillHints="text"
-                android:fadeScrollbars="false"
-                android:fontFamily="@font/jameel_noori_nastaleeq_regular"
-                android:gravity="top|start"
-                android:hint="@string/text_hint"
-                android:imeOptions="actionDone"
-                android:includeFontPadding="true"
-                android:inputType="textMultiLine"
-                android:padding="10dp"
-                android:scrollbarSize="2dp"
-                android:scrollbarStyle="insideInset"
-                android:scrollbars="vertical"
-                android:textDirection="rtl"
-                android:textSize="18sp" />
-
-            <!-- ICON BAR -->
+                    android:id="@+id/inputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="@color/textEditorBackground"
+                    android:allowUndo="true"
+                    android:autofillHints="text"
+                    android:fadeScrollbars="false"
+                    android:fontFamily="@font/jameel_noori_nastaleeq_regular"
+                    android:gravity="top|start"
+                    android:hint="@string/text_hint"
+                    android:imeOptions="actionDone"
+                    android:includeFontPadding="true"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp"
+                    android:scrollbarSize="2dp"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:textDirection="rtl"
+                    android:textSize="18sp"/>
+            
             <LinearLayout
-                style="@style/fragmentContainerStyle"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:layout_marginHorizontal="12dp"
+                android:paddingHorizontal="18dp"
                 android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:background="@drawable/top_border">
 
                 <!-- Left icons -->
                 <ImageView
                     android:id="@+id/deleteButton"
-                    style="@style/homeScreenTextActionIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
+                    android:tint="@color/textActionIcon"
                     android:contentDescription="TODO"
                     android:src="@drawable/ic_delete_button" />
 
                 <ImageView
                     android:id="@+id/undoButton"
-                    style="@style/homeScreenTextActionIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="24dp"
                     android:layout_marginEnd="16dp"
+                    android:tint="@color/textActionIcon"
                     android:contentDescription="Undo Button"
                     android:src="@drawable/ic_undo_button" />
 
                 <ImageView
                     android:id="@+id/redoButton"
-                    style="@style/homeScreenTextActionIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="24dp"
                     android:layout_marginEnd="16dp"
+                    android:tint="@color/textActionIcon"
                     android:contentDescription="Redo Button"
                     android:src="@drawable/ic_redo_button" />
 
@@ -106,13 +103,15 @@
                 <!-- Right icon -->
                 <ImageView
                     android:id="@+id/copyButton"
-                    style="@style/homeScreenTextActionIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:tint="@color/textActionIcon"
                     android:contentDescription="@string/copy_button"
                     android:src="@drawable/ic_copy_button" />
             </LinearLayout>
+            
         </LinearLayout>
+        
     </com.google.android.material.card.MaterialCardView>
 
     <ImageView
@@ -131,6 +130,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:textColor="@color/recentFileText"
         android:text="@string/recent_files"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -147,13 +147,13 @@
 
     <ImageView
         android:id="@+id/placeholder"
-        style="@style/noFilesPlaceholder"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginTop="16dp"
         android:contentDescription="No files to show"
         android:src="@drawable/ic_empty_list_placeholder"
         android:visibility="visible"
+        android:tint="@color/noFilePlaceHolder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

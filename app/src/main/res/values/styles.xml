@@ -1,0 +1,46 @@
+<resources>
+
+    <style name="navigationBarStyle">
+        <item name="android:itemIconSize">24dp</item>
+        <item name="android:itemPaddingTop">12dp</item>
+    </style>
+
+    <style name="fragmentContainerStyle">
+        <item name="android:padding">16dp</item>
+    </style>
+
+
+    <!-- Home Screen coloring style -->
+
+    <style name="mainHeadingStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="textEditorCard" parent="@android:style/Widget.CardView">
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:cardElevation">0dp</item>
+        <item name="cardCornerRadius">16dp</item>
+    </style>
+
+    <style name="homeScreenTextEditorStyle" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">@color/textInEditText</item>
+        <item name="android:textColorHint">@color/placeHolderText</item>
+        <item name="android:background">@color/textEditorBackground</item>
+    </style>
+
+
+
+    <!-- Voice Popup coloring styles -->
+
+
+    <style name="voicePopupBackground">
+        <item name="android:background">@drawable/bg_popup</item>
+    </style>
+
+    <style name="voiceMenuHeading">
+        <item name="android:textColor">@color/voiceMenuHeading</item>
+        <item name="android:drawableTint">@color/voiceMenuHeading</item>
+    </style>
+</resources>

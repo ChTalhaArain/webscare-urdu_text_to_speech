@@ -5,4 +5,12 @@
     <string name="text_hint">یہاں سے شروع کریں...</string>
     <string name="copy_button">Copy Button</string>
     <string name="recent_files">Recent Files</string>
+    <string name="karachi_urdu">Karachi Urdu</string>
+    <string name="lahori_urdu">Lahori Urdu</string>
+    <string name="pakistani_urdu_accent">Pakistani Urdu Accent</string>
+    <string name="standard_urdu">Standard Urdu</string>
+    <string name="accent">Accent</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="gender">Gender</string>
 </resources>

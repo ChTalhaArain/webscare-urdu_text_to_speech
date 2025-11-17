@@ -5,8 +5,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    // coloring styles for light theme
+    <color name="navItem">#005D28</color>
+    <color name="navItemSelected">#FFCF30</color>
+    <color name="navBarBackground">#EFEFEF</color>
 
+    <color name="fragmentBackground">#FFFFFF</color>
 
     <color name="headingText">#005D28</color>
     <color name="bellIcon">#ABABAB</color>
@@ -44,57 +47,7 @@
     <color name="fileNameHeading">#414141</color>
 
 
-    <color name="navItem">#005D28</color>
-    <color name="navItemSelected">#FFCF30</color>
-    <color name="navBarBackground">#EFEFEF</color>
 
-
-
-    // coloring styles for dark theme
-
-
-    <color name="background_dark">#232323</color>
-    <color name="navBackground_dark">#232323</color>
-
-    <color name="headingText_d">#03CE5A</color>
-    <color name="bellIcon_d">#D4D4D4</color>
-
-    <color name="placeHolderText_d">#FFFFFF</color>
-    <color name="textInEditText_d">#FFFFFF</color>
-    <color name="boarderOfTextEditor_d">#151515</color>
-    <color name="textActionIcon_d">#D4D4D4</color>
-    <color name="textActionBarBorder_d">#623636</color>
-    <color name="textEditorBackground_d">#2E2E2E</color>
-
-    <color name="recentFileText_d">#FFFFFF</color>
-    <color name="noFilePlaceHolder_d">#FFFFFF</color>
-    <color name="seeAllText_d">#D4D4D4</color>
-
-    <color name="fileCardBorder_d">#2E2E2E</color>
-
-    <color name="fileNameText_d">#D4D4D4</color>
-    <color name="dotMenu_d">#D4D4D4</color>
-
-    <color name="voiceMenuBorder_d">#414141</color>
-    <color name="voiceMenuHeading_d">#5B5858</color>
-    <color name="voiceMenuHeadingDrawable_d">#5B5858</color>
-    <color name="voiceMenuOptions_d">#5B5858</color>
-    <color name="voiceMenuOptionsDrawable_d">#6DEFA5</color>
-
-    <color name="fileMenuText_d"></color>
-    <color name="fileMenuBackground_d"></color>
-    <color name="fileMenuSelectedBorder_d"></color>
-    <color name="fileMenuSelectedBackground_d"></color>
-    <color name="fileMenuIcon_d"></color>
-
-    <color name="keypadOpenTextHeading_d"></color>
-    <color name="keypadHeadingBackIcon_d"></color>
-    <color name="fileNameHeading_d"></color>
-
-
-    <color name="navItem_d">#089F49</color>
-    <color name="navItemSelected_d">#FFC918</color>
-    <color name="navBarBackground_d">#212121</color>
 
 
 </resources>
