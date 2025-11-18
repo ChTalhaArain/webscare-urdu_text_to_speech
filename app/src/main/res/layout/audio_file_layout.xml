@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="12dp"
+    android:layout_marginVertical="4dp"
+    android:background="@drawable/bg_card_round">
+
+    <!-- Placeholder Image -->
+    <ImageView
+        android:id="@+id/ivPlaceholder"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/file_placeholder"
+        android:src="@drawable/ic_file_placeholder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- File Name Container -->
+    <FrameLayout
+        android:id="@+id/flFileName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/ivPlaceholder"
+        app:layout_constraintEnd_toStartOf="@id/flMenu"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Normal Text -->
+        <TextView
+            android:id="@+id/tvFileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:visibility="visible"
+            android:textColor="@color/fileNameText"
+            android:text="@string/audio_file"
+            android:textSize="16sp"/>
+
+        <!-- Editable Text (hidden by default) -->
+        <EditText
+            android:id="@+id/etFileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="File Name"
+            android:inputType="text"
+            android:visibility="gone"
+            android:hint="@string/rename_your_file"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:textSize="16sp"/>
+    </FrameLayout>
+
+    <!-- Menu Container -->
+    <FrameLayout
+        android:id="@+id/flMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Three Dot Icon -->
+        <ImageView
+            android:id="@+id/ivMenu"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:visibility="visible"
+            android:src="@drawable/ic_three_dot_menu"
+            android:contentDescription="@string/file_menu"
+            app:tint="@color/textActionIcon" />
+
+        <!-- Check Button (hidden by default) -->
+        <ImageView
+            android:id="@+id/cbMenu"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_cancel"
+            android:contentDescription="@string/cancel_rename"
+            android:visibility="gone"/>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

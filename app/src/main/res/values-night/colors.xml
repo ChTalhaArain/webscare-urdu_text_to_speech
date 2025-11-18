@@ -33,22 +33,16 @@
     <color name="fileNameText">#D4D4D4</color>
     <color name="dotMenu_d">#D4D4D4</color>
 
-    <color name="voiceMenuBorder_d">#414141</color>
-    <color name="voiceMenuHeading_d">#5B5858</color>
-    <color name="voiceMenuHeadingDrawable_d">#5B5858</color>
-    <color name="voiceMenuOptions_d">#5B5858</color>
-    <color name="voiceMenuOptionsDrawable_d">#6DEFA5</color>
+    <color name="menuDivider">#323131</color>
+    <color name="menuOptionSelected">#2F2F2F</color>
+    <color name="voiceMenuBackground">#232323</color>
+    <color name="voiceMenuText">#FAFAFA</color>
+    <color name="checkOption">#6DEFA5</color>
 
-    <color name="fileMenuText_d"></color>
-    <color name="fileMenuBackground_d"></color>
-    <color name="fileMenuSelectedBorder_d"></color>
-    <color name="fileMenuSelectedBackground_d"></color>
-    <color name="fileMenuIcon_d"></color>
-
-    <color name="keypadOpenTextHeading_d"></color>
-    <color name="keypadHeadingBackIcon_d"></color>
-    <color name="fileNameHeading_d"></color>
-
+    <color name="voiceMenuBorder">#414141</color>
+    <color name="voiceMenuHeading">#5B5858</color>
+    <color name="voiceMenuHeadingDrawable">#5B5858</color>
+    <color name="voiceMenuOptions">#5B5858</color>
 
 
 </resources>

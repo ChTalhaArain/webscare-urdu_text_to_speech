@@ -1,8 +1,8 @@
 <resources>
 
-    <style name="navigationBarStyle">
-        <item name="android:itemIconSize">24dp</item>
-        <item name="android:itemPaddingTop">12dp</item>
+    <style name="navigationBarStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconSize">24dp</item>
+        <item name="itemPaddingTop">12dp</item>
     </style>
 
     <style name="fragmentContainerStyle">
@@ -17,10 +17,10 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="textEditorCard" parent="@android:style/Widget.CardView">
+    <style name="textEditorCard" parent="Widget.MaterialComponents.CardView">
         <item name="android:padding">8dp</item>
         <item name="android:layout_marginTop">16dp</item>
-        <item name="android:cardElevation">0dp</item>
+        <item name="cardElevation">0dp</item>
         <item name="cardCornerRadius">16dp</item>
     </style>
 
@@ -34,13 +34,15 @@
 
     <!-- Voice Popup coloring styles -->
 
-
-    <style name="voicePopupBackground">
-        <item name="android:background">@drawable/bg_popup</item>
+    <style name="voicePopupMenu" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="color">@color/voiceMenuText</item>
+        <item name="drawableTint">@color/voiceMenuText</item>
+        <item name="drawableEndCompat">@drawable/ic_arrow_down</item>
     </style>
 
-    <style name="voiceMenuHeading">
-        <item name="android:textColor">@color/voiceMenuHeading</item>
-        <item name="android:drawableTint">@color/voiceMenuHeading</item>
-    </style>
+
 </resources>

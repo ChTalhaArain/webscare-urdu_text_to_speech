@@ -297,8 +297,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_arrow_down" />
-                            <entry key="sourceFile" value="C:\Users\chtal\Downloads\ic_arrow_down.svg" />
+                            <entry key="outputName" value="ic_cancel" />
+                            <entry key="sourceFile" value="C:\Users\chtal\Downloads\ic_cancel.svg" />
                           </map>
                         </option>
                       </PersistentState>

@@ -1,5 +1,7 @@
 package com.webscare.urdutexttospeech.fragments;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
@@ -25,17 +27,26 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.core.widget.TextViewCompat;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+
 import com.webscare.urdutexttospeech.R;
 import com.webscare.urdutexttospeech.databinding.FragmentHomeBinding;
 import com.webscare.urdutexttospeech.databinding.PopupVoiceSettingsBinding;
+import com.webscare.urdutexttospeech.helper.AudioFile;
+import com.webscare.urdutexttospeech.helper.AudioFilesAdapter;
+
 import org.jetbrains.annotations.NotNull;
 
+import java.io.File;
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Deque;
+import java.util.List;
 
 public class Home extends Fragment {
 
-    FragmentHomeBinding ui;
+    private FragmentHomeBinding ui;
 
     private final Deque<String> undoStack = new ArrayDeque<>();
     private final Deque<String> redoStack = new ArrayDeque<>();
@@ -60,6 +71,7 @@ public class Home extends Fragment {
         setupClickListeners();
         setupTextWatcher();
         setupVoicePopup();
+        populateRecyclerView();
     }
 
     private void setupClickListeners() {
@@ -94,12 +106,12 @@ public class Home extends Fragment {
 
         final int DELAY = 200;
 
-        SharedPreferences prefs = ui.getRoot().getContext().getSharedPreferences("gender_prefs", Context.MODE_PRIVATE);
+        SharedPreferences prefs = ui.getRoot().getContext().getSharedPreferences("gender_prefs", MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
 
 
         ui.playButton.setOnLongClickListener(view -> {
-            int selectedColor = ContextCompat.getColor(ui.getRoot().getContext(), R.color.voiceMenuOptionsDrawable);
+            int selectedColor = ContextCompat.getColor(ui.getRoot().getContext(), R.color.checkOption);
 
             PopupVoiceSettingsBinding popup = PopupVoiceSettingsBinding.inflate(getLayoutInflater());
             View popupView = popup.getRoot();
@@ -299,5 +311,56 @@ public class Home extends Fragment {
         ui.undoButton.setAlpha(undoStack.isEmpty() ? 0.5f : 1.0f);
         ui.redoButton.setAlpha(redoStack.isEmpty() ? 0.5f : 1.0f);
     }
+
+
+    private void populateRecyclerView() {
+
+        List<AudioFile> audioFiles = loadAudioFiles();
+
+        if (audioFiles.isEmpty()) {
+            ui.recyclerFiles.setVisibility(View.GONE);
+            ui.placeholder.setVisibility(View.VISIBLE);
+            ui.seeAll.setVisibility(View.GONE);
+        } else {
+            ui.placeholder.setVisibility(View.GONE);
+            ui.recyclerFiles.setVisibility(View.VISIBLE);
+            ui.seeAll.setVisibility(View.VISIBLE);
+
+            ui.seeAll.setOnClickListener( v -> NavHostFragment.findNavController(this).navigate(R.id.action_homeFragment_to_LocalFilesFragment));
+
+            AudioFilesAdapter adapter = new AudioFilesAdapter(requireContext(), audioFiles);
+            ui.recyclerFiles.setLayoutManager(new LinearLayoutManager(requireContext()));
+            ui.recyclerFiles.setAdapter(adapter);
+        }
+
+
+    }
+
+
+    private List<AudioFile> loadAudioFiles() {
+
+        List<AudioFile> list = new ArrayList<>();
+
+        File dir = requireContext().getExternalFilesDir("Audio");
+
+        if (dir == null) {
+            System.out.println("dir is null");
+            return list;
+        }
+
+        File[] files = dir.listFiles();
+
+
+        if (files != null) {
+            for (File f : files) {
+                if (f.isFile() && f.getName().endsWith(".mp3")) {
+                    list.add(new AudioFile(f.getName(), f.getAbsolutePath()));
+                }
+            }
+        }
+
+        return list;
+    }
+
 
 }

@@ -14,8 +14,8 @@
         android:layout_height="wrap_content"
         style="@style/mainHeadingStyle"
         android:text="@string/home_screen_title"
-        android:drawableEnd="@drawable/ic_notification_button"
         android:textColor="@color/headingText"
+        app:drawableEndCompat="@drawable/ic_notification_button"
         app:iconTint="@color/bellIcon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,27 +72,27 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
-                    android:tint="@color/textActionIcon"
-                    android:contentDescription="TODO"
-                    android:src="@drawable/ic_delete_button" />
+                    android:contentDescription="@string/clear_text"
+                    android:src="@drawable/ic_delete_button"
+                    app:tint="@color/textActionIcon" />
 
                 <ImageView
                     android:id="@+id/undoButton"
                     android:layout_width="wrap_content"
                     android:layout_height="24dp"
                     android:layout_marginEnd="16dp"
-                    android:tint="@color/textActionIcon"
-                    android:contentDescription="Undo Button"
-                    android:src="@drawable/ic_undo_button" />
+                    android:contentDescription="@string/undo_button"
+                    android:src="@drawable/ic_undo_button"
+                    app:tint="@color/textActionIcon" />
 
                 <ImageView
                     android:id="@+id/redoButton"
                     android:layout_width="wrap_content"
                     android:layout_height="24dp"
                     android:layout_marginEnd="16dp"
-                    android:tint="@color/textActionIcon"
-                    android:contentDescription="Redo Button"
-                    android:src="@drawable/ic_redo_button" />
+                    android:contentDescription="@string/redo_button"
+                    android:src="@drawable/ic_redo_button"
+                    app:tint="@color/textActionIcon" />
 
                 <!-- Spacer -->
                 <View
@@ -105,9 +105,9 @@
                     android:id="@+id/copyButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:tint="@color/textActionIcon"
                     android:contentDescription="@string/copy_button"
-                    android:src="@drawable/ic_copy_button" />
+                    android:src="@drawable/ic_copy_button"
+                    app:tint="@color/textActionIcon" />
             </LinearLayout>
             
         </LinearLayout>
@@ -119,22 +119,42 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginTop="20dp"
+        android:contentDescription="@string/play_button"
         android:src="@drawable/ic_play_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/card" />
 
-    <TextView
+    <LinearLayout
         android:id="@+id/recentFilesHeading"
-        style="@style/homeScreenRecentFilesHeading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:textColor="@color/recentFileText"
-        android:text="@string/recent_files"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/playButton" />
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/playButton">
+
+        <!-- Left-aligned text -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/recentFileText"
+            android:text="@string/recent_files"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="start"/>
+
+        <!-- Right-aligned text -->
+        <TextView
+            android:id="@+id/seeAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/seeAllText"
+            android:text="@string/see_all"
+            android:visibility="gone"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:gravity="end"/>
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerFiles"
@@ -150,14 +170,14 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginTop="16dp"
-        android:contentDescription="No files to show"
+        android:contentDescription="@string/no_files_to_show"
         android:src="@drawable/ic_empty_list_placeholder"
         android:visibility="visible"
-        android:tint="@color/noFilePlaceHolder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/recentFilesHeading"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintVertical_bias="0.2"
+        app:tint="@color/noFilePlaceHolder" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

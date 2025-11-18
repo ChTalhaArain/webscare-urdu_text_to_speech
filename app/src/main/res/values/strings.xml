@@ -13,4 +13,15 @@
     <string name="female">Female</string>
     <string name="male">Male</string>
     <string name="gender">Gender</string>
+    <string name="file_menu">File Menu</string>
+    <string name="audio_file">Audio file</string>
+    <string name="file_placeholder">File Placeholder</string>
+    <string name="cancel_rename">cancel rename</string>
+    <string name="rename_your_file">Rename your file</string>
+    <string name="no_files_to_show">No files to show</string>
+    <string name="play_button">Play Button</string>
+    <string name="redo_button">Redo Button</string>
+    <string name="undo_button">Undo Button</string>
+    <string name="clear_text">clear text</string>
+    <string name="see_all">See All</string>
 </resources>

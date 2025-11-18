@@ -30,11 +30,17 @@
     <color name="fileNameText">#414141</color>
     <color name="dotMenu">#B2B9B5</color>
 
+    <color name="menuDivider">#EFEFEF</color>
+    <color name="menuOptionSelected">#E0E0E0</color>
     <color name="voiceMenuBackground">#FBFBFB</color>
+    <color name="voiceMenuText">#5B5858</color>
+    <color name="checkOption">#005D28</color>
+
     <color name="voiceMenuHeading">#5B5858</color>
     <color name="voiceMenuHeadingDrawable">#5B5858</color>
     <color name="voiceMenuOptions">#5B5858</color>
     <color name="voiceMenuOptionsDrawable">#6DEFA5</color>
+
 
     <color name="fileMenuText">#5B5858</color>
     <color name="fileMenuBackground">#FFFFFF</color>

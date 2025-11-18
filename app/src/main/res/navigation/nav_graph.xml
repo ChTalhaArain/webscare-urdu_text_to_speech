@@ -6,7 +6,11 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.webscare.urdutexttospeech.fragments.Home"
-        android:label="Home" />
+        android:label="Home">
+        <action
+            android:id="@+id/action_homeFragment_to_LocalFilesFragment"
+            app:destination="@id/LocalFilesFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/LocalFilesFragment"

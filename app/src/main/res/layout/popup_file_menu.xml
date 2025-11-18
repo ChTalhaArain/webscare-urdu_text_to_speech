@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/bg_popup"
+    android:layout_width="180dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/actionPlay"
+        android:text="Play"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:textColor="@color/voiceMenuText"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        app:drawableTint="@color/voiceMenuText"
+        android:background="@drawable/bottom_border"
+        app:drawableStartCompat="@drawable/ic_action_menu_play_button"/>
+
+
+    <TextView
+        android:id="@+id/actionRename"
+        android:text="Rename"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:textColor="@color/voiceMenuText"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:background="@drawable/bottom_border"
+        app:drawableStartCompat="@drawable/ic_action_menu_rename_button"
+        app:drawableTint="@color/voiceMenuText" />
+
+    <TextView
+        android:id="@+id/actionShare"
+        android:text="Share"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:textColor="@color/voiceMenuText"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:background="@drawable/bottom_border"
+        app:drawableStartCompat="@drawable/ic_action_menu_share_button"
+        app:drawableTint="@color/voiceMenuText" />
+
+    <TextView
+        android:id="@+id/actionRemove"
+        android:text="Remove"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:textColor="@color/voiceMenuText"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        app:drawableStartCompat="@drawable/ic_action_menu_remove_button"
+        app:drawableTint="@color/voiceMenuText" />
+
+
+</LinearLayout>
